@@ -1,0 +1,13 @@
+{
+  "intents": [
+    {
+      "intent": "GetHealthInfo",
+      "Slots": [
+        {
+          "name": "MedicalCondition",
+          "Type": "LIST_OF_CONDITIONS"
+        }
+      ]
+    }
+  ]
+}

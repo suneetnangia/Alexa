@@ -7,6 +7,11 @@ Give it a spin here-
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
+## Flow 
+#### REST API App in the diagram below is deployed in your Azure subscription when you click "Deploy" button above. LUIS service endpoint it connects to is the shared service but can be changed to yours via appsettings.json file in the code.
+
+![Screenshot](https://github.com/suneetnangia/Alexa/blob/master/Microsoft.Demos.Alexa.Resources/AlexaSkillsScreenshots/Flow.PNG?raw=true)
+
 ## What Does It Do-
 1. Provides a RESTful endpoint for Alexa skill to send JSON formatted request with full utterances.
 2. Transforms JSON to querystring parameters and sends the request to LUIS API.

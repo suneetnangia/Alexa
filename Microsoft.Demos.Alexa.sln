@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.10
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Demos.Alexa.Luis", "Microsoft.Demos.Alexa.Luis\Microsoft.Demos.Alexa.Luis.csproj", "{13943B70-F430-479E-B64D-4C241DB1746C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Demos.Alexa.Luis", "Microsoft.Demos.Alexa.Luis\Microsoft.Demos.Alexa.Luis.csproj", "{13943B70-F430-479E-B64D-4C241DB1746C}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "Microsoft.Demos.Alexa.Resources", "Microsoft.Demos.Alexa.Resources\Microsoft.Demos.Alexa.Resources.deployproj", "{A4D0437F-BD1C-4EE3-AA35-F8E4F7390553}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{13943B70-F430-479E-B64D-4C241DB1746C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13943B70-F430-479E-B64D-4C241DB1746C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13943B70-F430-479E-B64D-4C241DB1746C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4D0437F-BD1C-4EE3-AA35-F8E4F7390553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D0437F-BD1C-4EE3-AA35-F8E4F7390553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D0437F-BD1C-4EE3-AA35-F8E4F7390553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D0437F-BD1C-4EE3-AA35-F8E4F7390553}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

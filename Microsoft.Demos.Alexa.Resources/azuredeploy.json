@@ -1,0 +1,109 @@
+{
+  "$schema": "http://schemas.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "apiAppName": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the API app to create. The name must contain at least 8 characters and no more than 50 characters."
+      }
+    },
+    "hostingPlanName": {
+      "type": "string",
+      "defaultValue": "PostcodeAPISvcPlan",
+      "metadata": {
+        "description": "The settings of the existing hosting plan."
+      }
+    },
+    "hostingPlanSettingName": {
+      "type": "string",
+      "defaultValue": "D1",
+      "metadata": {
+        "description": "The settings of the existing hosting plan."
+      }
+    },
+    "hostingPlanSettingTier": {
+      "type": "string",
+      "defaultValue": "Shared",
+      "metadata": {
+        "description": "The settings of the existing hosting plan."
+      }
+    },
+    "hostingPlanSettingCapacity": {
+      "type": "int",
+      "defaultValue": 0,
+      "metadata": {
+        "description": "The settings of the existing hosting plan."
+      }
+    },
+    "packageUrl": {
+      "type": "string",
+      "defaultValue": "https://servicesrepo.blob.core.windows.net/postcodeapi/Microsoft.Demo.Postcode.API.zip",
+      "metadata": {
+        "description": "The location for the API app MSDeploy Package."
+      }
+    }
+  },
+  "variables": {
+    "sku": {
+      "name": "[parameters('hostingPlanSettingName')]",
+      "tier": "[parameters('hostingPlanSettingTier')]",
+      "capacity": "[parameters('hostingPlanSettingCapacity')]"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Web/serverfarms",
+      "apiVersion": "2015-08-01",
+      "name": "[parameters('hostingPlanName')]",
+      "sku": "[variables('sku')]",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "name": "[parameters('hostingPlanName')]"
+      }
+    },
+    {
+      "type": "Microsoft.Web/sites",
+      "apiVersion": "2015-08-01",
+      "name": "[parameters('apiAppName')]",
+      "location": "[resourceGroup().location]",
+      "kind": "api",
+      "properties": {
+        "name": "[parameters('apiAppName')]",
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]"
+      },
+      "resources": [
+        {
+          "name": "MSDeploy",
+          "type": "extensions",
+          "location": "[resourceGroup().location]",
+          "apiVersion": "2014-06-01",
+          "dependsOn": [
+            "[concat('Microsoft.Web/sites/', parameters('apiAppName'))]"
+          ],
+          "tags": {
+            "displayName": "ContentDeploy"
+          },
+          "properties": {
+            "packageUri": "[parameters('packageUrl')]",
+            "dbType": "None",
+            "connectionString": "",
+            "setParameters": {
+              "IIS Web Application Name": "[parameters('apiAppName')]"
+            }
+          }
+        }
+
+      ],
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]"
+      ]
+    }
+  ],
+  "outputs": {
+    "siteDetails": {
+      "type": "string",
+      "value": "[concat('http://',reference(resourceId('Microsoft.Web/sites', parameters('apiAppName'))).hostNames[0])]"
+    }
+  }
+}

@@ -31,7 +31,7 @@
       <Visible>False</Visible>
     </None>
     <Content Include="Deploy-AzureResourceGroup.ps1" />
-    <None Include="Microsoft.Demos.Alexa.Luis.zip" />
+    <Content Include="Microsoft.Demos.Alexa.Luis.zip" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>

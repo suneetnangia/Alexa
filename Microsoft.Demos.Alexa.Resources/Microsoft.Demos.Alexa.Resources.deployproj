@@ -28,6 +28,7 @@
     <Content Include="azuredeploy.json" />
     <Content Include="azuredeploy.parameters.json" />
     <None Include="AlexaSkillsScreenshots\Configuration.PNG" />
+    <None Include="AlexaSkillsScreenshots\Flow.PNG" />
     <None Include="AlexaSkillsScreenshots\help-dog-picture.jpg" />
     <None Include="AlexaSkillsScreenshots\InteractionModelIntentCreation.PNG" />
     <None Include="AlexaSkillsScreenshots\InteractionModelIntentUtterances.PNG" />

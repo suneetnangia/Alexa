@@ -38,7 +38,7 @@
     },
     "packageUrl": {
       "type": "string",
-      "defaultValue": "https://servicesrepo.blob.core.windows.net/postcodeapi/Microsoft.Demos.Alexa.Luis.zip",
+      "defaultValue": "https://github.com/suneetnangia/Alexa/blob/master/Microsoft.Demos.Alexa.Resources/Microsoft.Demos.Alexa.Luis.zip?raw=true",
       "metadata": {
         "description": "The location for the API app MSDeploy Package."
       }

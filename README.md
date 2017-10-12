@@ -1,10 +1,38 @@
-# Alexa
-Project demonstrates how Microsoft's cognitive service LUIS can be used to understand the intent of the user on Alexa. LUIS will return both intent and entities which you can potentially use to call your backend systems to return the information to the end user on Alexa.
+# Alexa with Azure Cognitive Services
+Project demonstrates how Microsoft's cognitive service LUIS can be used to understand the intent of the users on Alexa. The model extends to other cognitive services as well. LUIS will return both intent and entities which you can potentially use to call your backend systems to return the information to the end user on Alexa.
 
+Give it a spin here-
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsuneetnangia%2FAlexa%2Fmaster%2FMicrosoft.Demos.Alexa.Resources%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
-More Explanation on this project is available here- http://www.suneet.net/alexa
+## What Does It Do-
+1. Provides a RESTful endpoint for Alexa skill to send JSON formatted request with utterance.
+2. Transforms JSON to querystring parameters and sends the request to LUIS API.
+3. Transforms JSON response from LUIS API to JSON response for Alexa skill.
 
-Credits: https://www.nuget.org/packages/Alexa.NET/
+## Design Benefits-
+1. Provides a common intelligence layer for multiple channels including but not limited to Voice Services (e.g. Alexa), Bots, IVR.
+2. Allows conversations to transit between channels with the same user/session e.g. initiate chat on SMS and continue on Facebook when you get to computer.
+3. Follows microservices implementation pattern i.e. separation of intent domain.
+4. Provides better intent inference with continuous visibility and opportunity to improve the interpretation model.
+5. Exentisble design to allow other cognitive services like sentiment analysis to be plugged in later.
+
+## Integration with Alexa Skill
+### Key Points
+1. Configure Alexa skill to send full utterances/phrases spoken by the end user to this API, here's how-
+    - In Interaction Model, create a new custom slot type, call it "PhraseSlotType".
+    - In Interaction Model, add slot value for this newly created slot type e.g. "lease send Pedigree Dentastix medium". This is required to let interaction model know that this slot type can capture multiple words.
+    - In Interaction Model, create a new intent, call it "GenericIntent".
+    - In Interaction Model, under "Generic Intent", create a new slot of type "PhraseSlotType", call it "PhraseSlot".
+    - In Interaction Model, under "Generic Intent", create a new utterance as "{PhraseSlot}". This will let interaction model know that you want to capture everything in this one slot.
+2. Configure Alexa skill to send JSON request with utterance to this API.
+    - In Configuration, select Https endpoint type, and insert the default endpoint which points to your Azure API. Example- https://alexainterfacedemo.azurewebsites.net/api/alexa. Dont forget to specify Https infront of the URL as mentioned in the previous example here.
+    - In SSL Certificate, select "My development endpoint is a sub-domain of a domain that has a wildcard certificate from a certificate authority".
+3. Test the API
+    - In Test, ensure Test switch is enabled at the top.
+    - In Test, under "Enter Utterance" input, specify the utterance you want to test e.g. "Send me two packs of chicken nuggets for small dogs"
+
+## What's Next
+1. Connect Bot Framework with state management to allow conversational communication on Alexa and other channels.
+2. This API uses my LUIS model which is good enough for testing purposes but it will not be specific your domain. Please head over to LUIS.ai to learn more about LUIS and develop a model which suits your need.

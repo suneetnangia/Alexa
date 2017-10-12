@@ -11,13 +11,18 @@ Give it a spin here-
 #### REST API App in the diagram below is deployed in your Azure subscription when you click "Deploy" button above. LUIS service endpoint it connects to is the shared service but can be changed to yours via appsettings.json file in the code.
 
 <p align="center">
-  <img src="https://github.com/suneetnangia/Alexa/blob/master/Microsoft.Demos.Alexa.Resources/AlexaSkillsScreenshots/Flow.PNG?raw=true" width="350"/>  
+  <img src="https://github.com/suneetnangia/Alexa/blob/master/Microsoft.Demos.Alexa.Resources/AlexaSkillsScreenshots/ASISFlow.PNG?raw=true" width="350"/>  
 </p>
 
 ## What Does REST API Do-
 1. Provides a RESTful endpoint for Alexa skill to send JSON formatted request with full utterances.
 2. Transforms JSON to querystring parameters and sends the request to LUIS API.
 3. Transforms JSON response from LUIS API to JSON response for Alexa skill.
+
+## Target Architecture
+<p align="center">
+  <img src="https://github.com/suneetnangia/Alexa/blob/master/Microsoft.Demos.Alexa.Resources/AlexaSkillsScreenshots/TargetFlow.PNG?raw=true" width="350"/>  
+</p>
 
 ## Design Benefits-
 1. Provides a common intelligence layer for multiple channels including but not limited to Voice Services (e.g. Alexa), Bots, IVR.

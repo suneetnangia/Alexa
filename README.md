@@ -2,12 +2,13 @@
 Project demonstrates how Microsoft's cognitive service LUIS can be used to understand the intent of the users on Alexa. The model extends to other cognitive services as well. LUIS will return both intent and entities which you can potentially use to call your backend systems to return the information to the end user on Alexa.
 
 Give it a spin here-
+
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsuneetnangia%2FAlexa%2Fmaster%2FMicrosoft.Demos.Alexa.Resources%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
 ## What Does It Do-
-1. Provides a RESTful endpoint for Alexa skill to send JSON formatted request with utterance.
+1. Provides a RESTful endpoint for Alexa skill to send JSON formatted request with full utterances.
 2. Transforms JSON to querystring parameters and sends the request to LUIS API.
 3. Transforms JSON response from LUIS API to JSON response for Alexa skill.
 

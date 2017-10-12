@@ -7,3 +7,4 @@ Project demonstrates how Microsoft's cognitive service LUIS can be used to under
 
 More Explanation on this project is available here- http://www.suneet.net/alexa
 
+Credits: https://www.nuget.org/packages/Alexa.NET/

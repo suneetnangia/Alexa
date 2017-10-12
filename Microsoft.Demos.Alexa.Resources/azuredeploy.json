@@ -10,28 +10,28 @@
     },
     "hostingPlanName": {
       "type": "string",
-      "defaultValue": "PostcodeAPISvcPlan",
+      "defaultValue": "AlexaAPISvcPlan",
       "metadata": {
         "description": "The settings of the existing hosting plan."
       }
     },
     "hostingPlanSettingName": {
       "type": "string",
-      "defaultValue": "D1",
+      "defaultValue": "S1",
       "metadata": {
         "description": "The settings of the existing hosting plan."
       }
     },
     "hostingPlanSettingTier": {
       "type": "string",
-      "defaultValue": "Shared",
+      "defaultValue": "Standard",
       "metadata": {
         "description": "The settings of the existing hosting plan."
       }
     },
     "hostingPlanSettingCapacity": {
       "type": "int",
-      "defaultValue": 0,
+      "defaultValue": 1,
       "metadata": {
         "description": "The settings of the existing hosting plan."
       }

@@ -12,7 +12,7 @@ Give it a spin here-
 
 ![Screenshot](https://github.com/suneetnangia/Alexa/blob/master/Microsoft.Demos.Alexa.Resources/AlexaSkillsScreenshots/Flow.PNG?raw=true)
 
-## What Does It Do-
+## What Does REST API Do-
 1. Provides a RESTful endpoint for Alexa skill to send JSON formatted request with full utterances.
 2. Transforms JSON to querystring parameters and sends the request to LUIS API.
 3. Transforms JSON response from LUIS API to JSON response for Alexa skill.

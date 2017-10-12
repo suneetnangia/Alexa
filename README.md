@@ -33,6 +33,7 @@ Give it a spin here-
 3. Test the API
     - In Test tab, ensure Test switch is enabled at the top.
     - In Test tab, under "Enter Utterance" input, specify the utterance you want to test e.g. "Send me two packs of chicken nuggets for small dogs"
+#### Alexa Development Studio Screenshots https://github.com/suneetnangia/Alexa/tree/master/Microsoft.Demos.Alexa.Resources/AlexaSkillsScreenshots
 
 ## What's Next
 1. Connect Bot Framework with state management to allow conversational communication on Alexa and other channels.

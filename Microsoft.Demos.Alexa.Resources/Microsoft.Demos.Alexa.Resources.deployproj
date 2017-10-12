@@ -27,6 +27,16 @@
   <ItemGroup>
     <Content Include="azuredeploy.json" />
     <Content Include="azuredeploy.parameters.json" />
+    <None Include="AlexaSkillsScreenshots\Configuration.PNG" />
+    <None Include="AlexaSkillsScreenshots\help-dog-picture.jpg" />
+    <None Include="AlexaSkillsScreenshots\InteractionModelIntentCreation.PNG" />
+    <None Include="AlexaSkillsScreenshots\InteractionModelIntentUtterances.PNG" />
+    <None Include="AlexaSkillsScreenshots\InteractionModelSlotTypeCreation.PNG" />
+    <None Include="AlexaSkillsScreenshots\InteractionModelSlotTypeValues.PNG" />
+    <None Include="AlexaSkillsScreenshots\rsz_1help-dog-picture.jpg" />
+    <None Include="AlexaSkillsScreenshots\SkillInformation.PNG" />
+    <None Include="AlexaSkillsScreenshots\SSLCertificate.PNG" />
+    <None Include="AlexaSkillsScreenshots\Webp.net-resizeimage.jpg" />
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>

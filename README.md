@@ -23,7 +23,7 @@ Give it a spin here-
 This depicts what can be achived by this architecture i.e. connecting multiple services in hub and spoke model.
 
 <p align="center">
-  <img src="https://github.com/suneetnangia/Alexa/blob/master/Microsoft.Demos.Alexa.Resources/AlexaSkillsScreenshots/TargetFlow.PNG?raw=true" width="350"/>  
+  <img src="https://github.com/suneetnangia/Alexa/blob/master/Microsoft.Demos.Alexa.Resources/AlexaSkillsScreenshots/TargetFlow.PNG?raw=true" width="400"/>  
 </p>
 
 ## Design Benefits-

@@ -69,8 +69,8 @@ namespace Microsoft.Demos.Alexa.Luis.Controllers
                 Response = new ResponseBody
                 {
                     // Use SSML here to make voice more realistic.
-                    OutputSpeech = new PlainTextOutputSpeech { Text = $"Hmmm, I did not quite get that. Do you want to rephrase your request or call our customer service instead, at 0345 609 0111?" },
-                    Card = new SimpleCard { Title = "App Card Title", Content = "Hmmm, I did not quite get that. Do you want to rephrase your request or call our customer service instead, at 0345 609 0111?" },
+                    OutputSpeech = new PlainTextOutputSpeech { Text = $"Hmmm, I did not quite get that. Do you want to rephrase your request or call our customer service instead, at 0345 000 0000?" },
+                    Card = new SimpleCard { Title = "App Card Title", Content = "Hmmm, I did not quite get that. Do you want to rephrase your request or call our customer service instead, at 0345 000 0000?" },
                     ShouldEndSession = true
                 }
             };

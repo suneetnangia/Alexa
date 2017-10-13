@@ -37,7 +37,7 @@ This depicts what can be achived by this architecture i.e. connecting multiple s
 ### Key Points
 1. Configure Alexa skill to send full utterances/phrases spoken by the end user to this API, here's how-
     - In Interaction Model tab, create a new custom slot type, call it "PhraseSlotType".
-    - In Interaction Model tab, add slot value for this newly created slot type e.g. "sdjhf sahj asdkd alskds disoiew ewds dsjdsiuew dsiuds ouidsfiu ewoi dsoif sswewe". This value is intentionally made up of random characters and words to avoid any weighing towards the value entered when speech is converted to text and it is required to let interaction model know that this slot type can capture multiple words.
+    - In Interaction Model tab, add slot value for this newly created slot type e.g. "sdjhf sahj asdkd alskds disoiew ewds dsjdsiuew dsiuds ouidsfiu ewoi dsoif sswewe". This value is intentionally made up of random characters and words to avoid any weighing towards the value entered when speech is converted to text and it is required to let interaction model know that this slot type can capture multiple words. (thanks Dean Bryen for the top tip here)
     - In Interaction Model tab, create a new intent, call it "GenericIntent".
     - In Interaction Model tab, under "Generic Intent", create a new slot of type "PhraseSlotType", call it "PhraseSlot".
     - In Interaction Model tab, under "Generic Intent", create a new utterance as "{PhraseSlot}". This will let interaction model know that you want to capture everything in this one slot.

@@ -18,6 +18,7 @@ Give it a spin here-
 1. Provides a RESTful endpoint for Alexa skill to send JSON formatted request with full utterances.
 2. Transforms JSON to querystring parameters and sends the request to LUIS API.
 3. Transforms JSON response from LUIS API to JSON response for Alexa skill.
+Credit: This API uses Alexa serialisation lib from https://github.com/timheuer
 
 ## Target Architecture
 This depicts what can be achived by this architecture i.e. connecting multiple services in hub and spoke model.

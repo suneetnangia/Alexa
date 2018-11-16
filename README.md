@@ -42,6 +42,8 @@ This depicts what can be achived by this architecture i.e. connecting multiple s
     - In Interaction Model tab, create a new intent, call it "GenericIntent".
     - In Interaction Model tab, under "Generic Intent", create a new slot of type "PhraseSlotType", call it "PhraseSlot".
     - In Interaction Model tab, under "Generic Intent", create a new utterance as "{PhraseSlot}". This will let interaction model know that you want to capture everything in this one slot.
+    - In Interaction Model tab, click on "JSON Editor". In the list named "intents", locate the item with name "AMAZON.FallbackIntent" and delete it from the list.
+    - Save and build the model.
 2. Configure Alexa skill to send JSON request with utterance to this API.
     - In Configuration tab, select Https endpoint type, and insert the default endpoint which points to your Azure API. Example- https://alexainterfacedemo.azurewebsites.net/api/alexa. Dont forget to specify Https infront of the URL as mentioned in the previous example here.
     - In SSL Certificate tab, select "My development endpoint is a sub-domain of a domain that has a wildcard certificate from a certificate authority".
